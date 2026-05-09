@@ -88,3 +88,8 @@ export const api = {
   },
   principal() {
     return request("/campus/principal");
+  },
+  buses() {
+    return request("/campus/buses");
+  }
+};

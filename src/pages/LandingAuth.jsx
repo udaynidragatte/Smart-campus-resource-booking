@@ -188,4 +188,21 @@ function AuthCard({ title, button, register, setActivePage, setRole, setUser, in
                     setAuthFormData?.(account);
                     setActivePage("login");
                   } else {
-                    fillCr
+                    fillCredential(account);
+                  }
+                }}
+                className="rounded-2xl bg-white/10 p-4 text-left transition hover:bg-white/15">
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <p className="text-lg font-black">{account.role}</p>
+                  <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-black">Click to fill</span>
+                </div>
+                <p className="text-sm text-white/75">Email: <span className="font-bold text-white">{account.email}</span></p>
+                <p className="mt-1 text-sm text-white/75">Password: <span className="font-bold text-white">{account.password}</span></p>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
